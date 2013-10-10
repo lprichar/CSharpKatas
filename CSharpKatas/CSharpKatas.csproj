@@ -43,6 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="K01-BasicLinq.cs" />
+    <Compile Include="K04-Generics.cs" />
+    <Compile Include="K05-Delegates.cs" />
+    <Compile Include="K06-ConwaysGameOfLife.cs" />
+    <Compile Include="K07-MyWhere.cs" />
+    <Compile Include="K08-MySelect.cs" />
+    <Compile Include="K09-DependencyInjection.cs" />
+    <Compile Include="K10-ExpressionTrees.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
