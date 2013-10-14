@@ -1,10 +1,11 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
 
 namespace CSharpKatas
 {
-    public class Kata
+    public class Calculator
     {
-        public int SumToN(int start, int count)
+        public int SumNumbers(int start, int count)
         {
             // todo #1: Get all the tests passing
             // todo #2: Refactor so there are no loops or if statements (this is the functional approach and is idiomatic for C#)
@@ -17,38 +18,44 @@ namespace CSharpKatas
     public class Test
     {
         [Test]
-        public void SumToN_Start0Count0()
+        public void SumNumbers_StartAt100SumNext1_TotalIs100()
         {
-            var kata = new Kata();
-            Assert.AreEqual(0, kata.SumToN(0, 0));
+            var kata = new Calculator();
+            Assert.AreEqual(100, kata.SumNumbers(100, 1));
         }
 
         [Test]
-        public void SumToN_Start1Count1()
+        public void SumNumbers_StartAt100SumNext2_TotalIs199()
         {
-            var kata = new Kata();
-            Assert.AreEqual(1, kata.SumToN(1, 1));
+            var kata = new Calculator();
+            Assert.AreEqual(201, kata.SumNumbers(100, 2));
+        }
+        [Test]
+        public void SumNumbers_StartAt100SumNext0_TotalIs0()
+        {
+            var kata = new Calculator();
+            Assert.AreEqual(0, kata.SumNumbers(100, 0));
         }
 
         [Test]
-        public void SumToN_Start0Count2()
+        public void SumNumbers_StartAt0SumNext0_TotalIs0()
         {
-            var kata = new Kata();
-            Assert.AreEqual(3, kata.SumToN(0, 3));
+            var kata = new Calculator();
+            Assert.AreEqual(0, kata.SumNumbers(0, 0));
         }
 
         [Test]
-        public void SumToN_0To100()
+        public void SumNumbers_StartAt0SumNext3_TotalIs3()
         {
-            var kata = new Kata();
-            Assert.AreEqual(5050, kata.SumToN(1, 100));
+            var kata = new Calculator();
+            Assert.AreEqual(3, kata.SumNumbers(0, 3));
         }
 
         [Test]
-        public void SumToN_100To100()
+        public void SumNumbers_StartAt0SumNext100_TotalIs5050()
         {
-            var kata = new Kata();
-            Assert.AreEqual(199, kata.SumToN(99, 2));
+            var kata = new Calculator();
+            Assert.AreEqual(5050, kata.SumNumbers(1, 100));
         }
     }
 }
