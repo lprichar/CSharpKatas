@@ -17,12 +17,13 @@ namespace CSharpKatas
     }
 
     [TestFixture]
+    [Ignore]
     public class LinqProvidersTest
     {
         [Test]
         public void Convert_True_ConvertedToYes()
         {
-            // todo #1: Get the tests passing. Changing the paremeter of the function is ok, but not the unit tests
+            // todo #1: Remove the ignore attribute and get the tests passing. Changing the paremeter of the function is ok, but not the unit tests
             // todo #2: This is a terrible non-real world example because a real example would be too involved. So how is this feature really used?
 
             var languageConverter = new CSharpNaturalLanguageConverter();

@@ -8,7 +8,7 @@ namespace CSharpKatas
     {
         public string MapNumber(int i)
         {
-            // todo #1: Implement FizzBuzz (http://en.wikipedia.org/wiki/Bizz_buzz) for a single input
+            // todo #1: Remove the Ignore attribute, implement FizzBuzz (http://en.wikipedia.org/wiki/Bizz_buzz) for a single input
             return null;
         }
 
@@ -21,6 +21,7 @@ namespace CSharpKatas
     }
 
     [TestFixture]
+    [Ignore]
     public class FizzBuzz
     {
         [Test]

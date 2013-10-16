@@ -9,7 +9,7 @@ namespace CSharpKatas
         public IEnumerable<Person> ConvertFromJson(string salariedPeople, string hourlyPeople)
         {
             // todo #1: Add a reference to Json.NET (Newtonsoft.Json) using NuGet
-            // todo #2: Make the tests pass
+            // todo #2: Remove the Ignore attribute and make the tests pass
             // todo #3: Refactor so there is only one call to the Json.NET library and no loops
             return null;
         }
@@ -31,6 +31,7 @@ namespace CSharpKatas
     }
 
     [TestFixture]
+    [Ignore]
     public class TestGenerics
     {
         [Test]

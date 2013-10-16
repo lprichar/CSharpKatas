@@ -16,7 +16,7 @@ namespace CSharpKatas
     {
         public void InsertEmployee(Employee employee)
         {
-            // todo #1: Get all the tests to pass any way you can
+            // todo #1: Remove the ignore attribute and get all the tests to pass any way you can
             // todo #2: Refactor out common auto increment logic from InsertEmployee and InsertSale into a GetNextId function (you'll need System.Func a good grasp of generics)
             // todo #3: Refactor GetNextId so it has no if statements and no ternary operators (hint: use the ?? operator)
             // todo #4: Refactor out *all* common logic so InsertEmployee and InsertSale are a single line of code (lots of possible solutions). Was this an improvement?
@@ -39,6 +39,7 @@ namespace CSharpKatas
     }
 
     [TestFixture]
+    [Ignore]
     public class TestMockDatabase
     {
         [Test]

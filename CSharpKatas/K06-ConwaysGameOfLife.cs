@@ -26,7 +26,7 @@ namespace CSharpKatas
 
         public void IncrementGeneration()
         {
-            // todo #1: Get all tests passing
+            // todo #1: Remove the ignore attribute and get all tests passing
         }
 
         public IEnumerable<Board> GetAllFutureGenerations()
@@ -39,6 +39,7 @@ namespace CSharpKatas
     }
 
     [TestFixture]
+    [Ignore]
     public class TestGameOfLife
     {
         [Test]

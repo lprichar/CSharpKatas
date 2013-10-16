@@ -37,8 +37,10 @@ namespace CSharpKatas
     public class TestDoStuff
     {
         [Test]
+        [Ignore]
         public void GetRowsWithinRange_ThereIsARowWithinRange_ItsMessageIsReturned()
         {
+            // todo #0: Remove the Ignore attribute
             // todo #1: Start to clean up this disaster by focusing on LogParser. Extract out its File IO logic into a separate class so doesn't violate the single responsiblity principle (http://en.wikipedia.org/wiki/Solid_(object-oriented_design)).
             // todo #2: Implement the Inversion of Control (IoC) pattern in LogParser so that you could potentially use a separate implementation for the File IO logic
             // todo #3: Refactor the unit tests so that they never interact with the file system. Do this by subclassing the new class you created in #1 and injecting that into LogParser.
