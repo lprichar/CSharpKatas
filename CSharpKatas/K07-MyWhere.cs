@@ -2,7 +2,6 @@
 //// ReSharper disable LoopCanBeConvertedToQuery
 //// ReSharper disable UnusedVariable
 
-//using System;
 //using System.Collections.Generic;
 //using System.Linq;
 //using NUnit.Framework;
@@ -18,8 +17,8 @@
 //        [Test]
 //        public void MyWhere_GivenAnArrayOfInts_FiltersThem()
 //        {
-//            int[] ints = {1, 2, 3, 4, 5};
-//            var oddInts = ints.MyWhere(IsOdd).ToList();
+//            int[] ints = { 1, 2, 3, 4, 5 };
+//            List<int> oddInts = ints.MyWhere(IsOdd).ToList();
 //            Assert.AreEqual(3, oddInts.Count());
 //            Assert.AreEqual(1, oddInts[0]);
 //            Assert.AreEqual(3, oddInts[1]);
@@ -29,8 +28,8 @@
 //        [Test]
 //        public void MyWhere_GivenAListOfStrings_FiltersThem()
 //        {
-//            var strings = new List<string> {"two", "roads", "diverged", "in", "a", "yellow", "wood"};
-//            var stringsWithO = strings.MyWhere(i => i.Contains("o")).ToList();
+//            var strings = new List<string> { "two", "roads", "diverged", "in", "a", "yellow", "wood" };
+//            List<int> stringsWithO = strings.MyWhere(i => i.Contains("o")).ToList();
 //            Assert.AreEqual(4, stringsWithO.Count());
 //            Assert.AreEqual("two", stringsWithO[0]);
 //            Assert.AreEqual("roads", stringsWithO[1]);
@@ -43,7 +42,7 @@
 //        {
 //            int[] ints = { 1, 2, 3, 4, 5 };
 //            int timesExecutedLambda = 0;
-//            var oddIntsQuery = ints.MyWhere(i =>
+//            IEnumerable<int> oddIntsQuery = ints.MyWhere(i =>
 //            {
 //                timesExecutedLambda++;
 //                return IsOdd(i);
@@ -59,7 +58,7 @@
 
 //        private static bool IsOdd(int i)
 //        {
-//            return i%2 == 1;
+//            return i % 2 == 1;
 //        }
 //    }
 //}

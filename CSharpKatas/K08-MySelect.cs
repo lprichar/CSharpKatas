@@ -2,7 +2,6 @@
 //// ReSharper disable LoopCanBeConvertedToQuery
 //// ReSharper disable UnusedVariable
 
-//using System;
 //using System.Collections.Generic;
 //using System.Linq;
 //using NUnit.Framework;
@@ -19,7 +18,7 @@
 //        public void MySelect_GivenAnArrayOfInts_FiltersThem()
 //        {
 //            int[] ints = { 0, 1, 2, 3 };
-//            var oddInts = ints.MySelect(Tripple).ToList();
+//            List<int> oddInts = ints.MySelect(Tripple).ToList();
 //            Assert.AreEqual(4, oddInts.Count());
 //            Assert.AreEqual(0, oddInts[0]);
 //            Assert.AreEqual(3, oddInts[1]);
@@ -36,7 +35,7 @@
 //        public void MySelect_GivenAListOfStrings_ConvertsToIntegers()
 //        {
 //            var strings = new List<string> { "1", "4", "-10" };
-//            var stringsWithO = strings.MySelect(int.Parse).ToList();
+//            List<int> stringsWithO = strings.MySelect(int.Parse).ToList();
 //            Assert.AreEqual(3, stringsWithO.Count());
 //            Assert.AreEqual(1, stringsWithO[0]);
 //            Assert.AreEqual(4, stringsWithO[1]);
@@ -48,7 +47,7 @@
 //        {
 //            int[] ints = { 1, 2, 3, 4, 5 };
 //            int timesExecutedLambda = 0;
-//            var oddIntsQuery = ints.MySelect(i =>
+//            IEnumerable<int> oddIntsQuery = ints.MySelect(i =>
 //            {
 //                timesExecutedLambda++;
 //                return Tripple(i);
