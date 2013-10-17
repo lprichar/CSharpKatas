@@ -25,7 +25,7 @@ namespace CSharpKatas
         }
 
         [Test]
-        public void SumNumbers_StartAt100SumNext2_TotalIs199()
+        public void SumNumbers_StartAt100SumNext2_TotalIs201()
         {
             var kata = new Calculator();
             Assert.AreEqual(201, kata.SumNumbers(100, 2));
