@@ -30,3 +30,9 @@ Anyone wishing to work on these problems is encouraged to create a branch and wo
 Anyone who
 is unable to solve a Kata in under a few minutes is encouraged to delete their solution and re-solve it until the
 solution is second-nature.
+
+Summary
+===========
+
+This project was created for the C# community.  Enjoy, learn, and please feel free to contribute 
+back updates or additional Katas (pull requests welcome).
