@@ -4,8 +4,6 @@ Overview
 CSharpKatas is a training tool for teaching C# newcommers how to apply advanced language features, how to write idiomatic
 C#, and most importantly how to avoid Java idioms in C#.
 
-![C# Isn't Java](CSharpIsntJava.png)
-
 Blog Series
 ===========
 
