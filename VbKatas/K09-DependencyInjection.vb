@@ -32,16 +32,23 @@ Namespace CSharpKatas
 
     <TestFixture(), Ignore()> _
     Public Class Test
+        Public Function GetAndInitParser(logName As String, logContents As String) As LogParser
+            If Not String.IsNullOrEmpty(logName) Then
+                File.WriteAllText(logName, logContents)
+            End If
+            Dim logParser = New LogParser()
+            Return logParser
+        End Function
+
         <Test()> _
         Public Sub GetRowsWithinRange_ThereIsARowWithinRange_ItsMessageIsReturned()
             ' todo #0: Remove the Ignore attribute
-            ' todo #1: Start to clean up this disaster by focusing on LogParser. Extract out its File IO logic into a separate class so doesn't violate the single responsiblity principle (http://en.wikipedia.org/wiki/Solid_(object-oriented_design)).
+            ' todo #1: Start to clean this up by focusing on LogParser. Extract out its File IO logic into a separate class so doesn't violate the single responsiblity principle (http://en.wikipedia.org/wiki/Solid_(object-oriented_design)).
             ' todo #2: Implement the Inversion of Control (IoC) pattern in LogParser so that you could potentially use a separate implementation for the File IO logic
             ' todo #3: Refactor the unit tests so that they never interact with the file system. Do this by subclassing the new class you created in #1 and injecting that into LogParser.
             ' todo #4: Now that you've done dependency injection manually, redo #3 with Moq.  Get it via nuget, read the examples in the documentation on their website.
 
-            File.WriteAllText("C:\\temp\\Log-Proj1.csv", "1/1/2013 5:00 PM,Begin logging")
-            Dim logParser = New LogParser()
+            Dim logParser = GetAndInitParser("C:\\temp\\Log-Proj1.csv", "1/1/2013 5:00 PM,Begin logging")
             Dim actual = logParser.GetMessagesWithinRange("Proj1", New DateTime(2013, 1, 1), New DateTime(2013, 1, 2)).ToList()
             Assert.AreEqual(1, actual.Count)
             Assert.AreEqual("Begin logging", actual(0))
@@ -49,16 +56,14 @@ Namespace CSharpKatas
 
         <Test()> _
         Public Sub GetRowsWithinRange_ThereIsARowOutsideOfRange_NothingIsReturned()
-            File.WriteAllText("C:\\temp\\Log-Proj2.csv", "1/1/2013 5:00 PM,User attempted to log in")
-            Dim logParser = New LogParser()
+            Dim logParser = GetAndInitParser("C:\\temp\\Log-Proj2.csv", "1/1/2013 5:00 PM,User attempted to log in")
             Dim actual = logParser.GetMessagesWithinRange("User attempted to log in", New DateTime(2013, 2, 1), New DateTime(2013, 2, 2)).ToList()
             Assert.AreEqual(0, actual.Count)
         End Sub
 
         <Test()> _
         Public Sub GetRowsWithinRange_ProjectDoesNotExist_NothingIsReturned()
-            File.Delete("C:\\temp\\Log-Proj3.csv")
-            Dim logParser = New LogParser()
+            Dim logParser = GetAndInitParser(Nothing, Nothing)
             Dim actual = logParser.GetMessagesWithinRange("Proj3", New DateTime(2013, 2, 1), New DateTime(2013, 2, 2)).ToList()
             Assert.AreEqual(0, actual.Count)
         End Sub
