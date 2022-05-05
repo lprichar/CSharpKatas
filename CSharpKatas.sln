@@ -1,20 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpKatas", "CSharpKatas\CSharpKatas.csproj", "{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpKatas", "CSharpKatas\CSharpKatas.csproj", "{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5EC485C9-82F0-4CFD-9AA7-DBBEF885ED28}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Debug|x64.Build.0 = Debug|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Debug|x86.Build.0 = Debug|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Release|x64.ActiveCfg = Release|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Release|x64.Build.0 = Release|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Release|x86.ActiveCfg = Release|Any CPU
+		{2FCE9CE0-9CF4-4FFB-B522-EB55CCFED0DD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

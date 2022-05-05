@@ -2,7 +2,7 @@ Overview
 ===========
 
 CSharpKatas is a training tool for teaching C# newcommers how to apply advanced language features, how to write idiomatic
-C#, and how to avoid Java idioms in C#.
+C#, and how to avoid Java idioms in C#. It builds upon .Net 6.0 and NUnit3 and runs on multiple platforms such as windows and linux.
 
 Blog Series
 ===========
